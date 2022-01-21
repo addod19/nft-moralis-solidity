@@ -9,6 +9,8 @@ import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import TokenPrice from "components/TokenPrice";
 import NFTBalance from "components/NFTBalance";
+import NFTMarket from "components/NFTMarket";
+import Transaction from "components/Transaction";
 import { Layout } from "antd";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
@@ -79,8 +81,14 @@ const App = ({ isServerInfo }) => {
 
         <div style={styles.content}>
           <Switch>
+            <Route path="/nftMarket">
+              <NFTMarket />
+            </Route>
             <Route path="/nftBalance">
               <NFTBalance />
+            </Route>
+            <Route path="/transaction">
+              <Transaction />
             </Route>
           </Switch>
         </div>
